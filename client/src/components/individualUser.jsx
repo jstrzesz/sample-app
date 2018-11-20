@@ -31,13 +31,11 @@ export default class Individual extends Component {
         <td>
           <img src={this.props.img} alt="user pic" className="userImg"></img>
         </td>
-        
         <td>{this.props.name}</td>
-        <br />
         <td>{this.props.email}</td>
+        <td>{this.props.city}</td>
         <td>{this.props.phone}</td>
         <td>{this.state.date}</td>
-        <td>{this.props.city}</td>
         <td>{this.props.years}</td>
       </tr>
       

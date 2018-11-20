@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const mongoDB = require('../../config');
+// const mongoDB = require('../../config');
 
 const db = mongoose.connection;
 
-// const mongoDB = 'mongodb://user1:abcd1234@ds255320.mlab.com:55320/random_users';
+const mongoDB = 'mongodb://user1:abcd1234@ds255320.mlab.com:55320/random_users';
 
-mongoose.connect(mongoDB.mongoDB, {
+mongoose.connect(mongoDB, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE,
   useNewUrlParser: true

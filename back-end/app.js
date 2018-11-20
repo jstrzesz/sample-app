@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+app.use(express.static(`${__dirname}/../build`));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -37,5 +38,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// const path = require('path')
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+})
+
+app.listen(9000)
 
 module.exports = app;
