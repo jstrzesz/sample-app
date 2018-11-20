@@ -2,9 +2,12 @@
 
 # dependencies
 /node_modules
+/back-end/node_modules
+/client/node_modules
 /.pnp
 .pnp.js
-
+.env
+config.js
 # testing
 /coverage
 
@@ -21,3 +24,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
